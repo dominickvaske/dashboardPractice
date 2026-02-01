@@ -55,10 +55,10 @@ body {
 	font-family: var(--standard-font);
 	font-weight: 600;
 }
-
+/* 
 body > div {
 	border: 1px solid red;
-}
+} */
 
 /* SIDEBAR */
 
@@ -67,6 +67,10 @@ body > div {
 	background-color: rgb(0, 153, 255);
 	padding-left: 15px;
 	padding-top: 15px;
+
+	display: flex; 		/* lays out sidebar in column format*/
+	flex-direction: column;
+	gap: 20px;
 }
 
 .icon { /*smaller icon control*/
@@ -83,7 +87,7 @@ svg.big-icon { /*for the top logo*/
 
 .side-link.logo { /*specifically for the top logo padding*/
 	grid-template-columns: 30px 1fr;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	gap: 8px;
 }
 
@@ -95,6 +99,10 @@ svg.big-icon { /*for the top logo*/
 	align-items: center;
 	color: white;
 	gap: 12px;
+}
+
+.side-link.technical-support {
+	padding-top: 50px;
 }
 
 #header {
