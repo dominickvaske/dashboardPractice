@@ -1,0 +1,39 @@
+*, *::before, *::after {
+  box-sizing: border-box; /* */
+}
+
+/* 2. Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; /* */
+}
+
+/* 3. Remove list styles on lists that are given a role attribute */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none; /* */
+}
+
+/* 4. Ensure images are responsive and block-level */
+img {
+  max-width: 100%;
+  display: block; /* */
+}
+
+/* 5. Inherit fonts for form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* */
+}
+
+/* DASHBOARD START */
