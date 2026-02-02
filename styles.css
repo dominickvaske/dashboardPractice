@@ -105,8 +105,37 @@ svg.big-icon { /*for the top logo*/
 	padding-top: 50px;
 }
 
+/* HEADER SECTION */
+
 #header {
 	grid-area: header;
+
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"search-bar notifications"
+		"greeting actions";
+}
+
+#header > div {
+	border: solid 1px red;
+}
+
+.search-bar {
+	grid-area: search-bar;
+}
+
+.notifications {
+	grid-area: notifications;
+}
+
+.greeting {
+	grid-area: greeting;
+}
+
+.actions {
+	grid-area: actions;
 }
 
 #main {
