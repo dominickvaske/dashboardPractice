@@ -118,12 +118,39 @@ svg.big-icon { /*for the top logo*/
 		"greeting actions";
 }
 
-#header > div {
+/* #header > div {
 	border: solid 1px red;
-}
+} */
 
 .search-bar {
 	grid-area: search-bar;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding-left: 50px;
+}
+
+.s-icon {
+	/* height: calc(var(--icon-height));
+	width: calc(var(--icon-width)); */
+	height: 30px;
+	width: 30px;
+	fill: black;
+	padding-top: 5px;
+	/*padding-left: 3px; */
+}
+
+.search-bar > input {
+	flex: 1;
+	height: 35%;
+	min-width: 200px;
+	max-width: 500px;
+
+	border-radius: 15px;
+	background-color: rgb(229, 227, 227);
+	border-style: none;
+	padding-left: 15px;
+	font-size: 80%;
 }
 
 .notifications {
@@ -138,6 +165,8 @@ svg.big-icon { /*for the top logo*/
 	grid-area: actions;
 }
 
+
+/* MAIN CONTENT SECTION */
 #main {
 	grid-area: main;
 	background-color: rgb(234, 230, 230);
