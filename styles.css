@@ -212,19 +212,57 @@ svg.big-icon { /*for the top logo*/
 
 /* MAIN CONTENT SECTION */
 #main {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: auto 1fr;
+	gap: 20px;
+	padding: 30px;
+	background-color: rgb(234, 230, 230);
+}
+
+.title {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 20px;
+}
+
+.cards {
+	grid-column: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(200px, auto);
+	gap: 20px;
+}
+
+.cards > .pCard {
+	border: solid 1px green;
+}
+
+
+.right-sidebar {
+	grid-column: 2;
+
+}
+
+
+#main > div {
+	border: solid 1px red;
+}
+/* #main {
 	grid-area: main;
 	background-color: rgb(234, 230, 230);
 	display: grid;
 	grid-template-rows: 60px 1fr;
 	grid-template-areas: 
 		"title"
-		"cards";
+		"projects";
 }
 
 .title {
 	grid-area: title;
 	display: grid;
-	grid-template-columns: 1fr 300px;
+	grid-template-columns: minmax(600px, 1fr) minmax(300px, 400px);
 	grid-template-areas: "t1 t2";
 	align-items: end;
 
@@ -239,10 +277,33 @@ svg.big-icon { /*for the top logo*/
 	grid-area: t2;
 }
 
-.cards {
-	grid-area: cards;
+.projects {
+	grid-area: projects;
+
+	display: grid;
+	grid-template-columns: minmax(600px,1fr) minmax(300px, 400px);
 }
 
-#main > div {
-	border: solid 1px red;
+.cards {
+	/* grid-area: cards; */
+
+	/* display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: 200px;
+	margin-left: 40px;
 }
+
+.cards > .pCard {
+	border: solid 1px green;
+
+	margin: 20px;
+	width: 250px;
+	height: 150px;
+}
+
+.announcements {
+
+} */
+
+
+
