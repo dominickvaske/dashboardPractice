@@ -112,7 +112,7 @@ svg.big-icon { /*for the top logo*/
 
 	display: grid;
 	grid-template-columns: 3fr 2fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 75px 75px;
 	grid-template-areas:
 		"search-bar notifications"
 		"greeting actions";
@@ -131,13 +131,10 @@ svg.big-icon { /*for the top logo*/
 }
 
 .s-icon {
-	/* height: calc(var(--icon-height));
-	width: calc(var(--icon-width)); */
 	height: 30px;
 	width: 30px;
 	fill: black;
 	padding-top: 5px;
-	/*padding-left: 3px; */
 }
 
 .search-bar > input {
@@ -155,14 +152,61 @@ svg.big-icon { /*for the top logo*/
 
 .notifications {
 	grid-area: notifications;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 50px;
+	gap: 30px
+}
+
+#bell {
+  height: 24px;
+  width: 24px;
+  fill: black;
+}
+
+#smallPic {
+  height: 40px;
+  width: 40px;
+}
+
+.notifications span {
+  font-weight: 700;
+  white-space: nowrap;  /* Prevent name from wrapping */
 }
 
 .greeting {
-	grid-area: greeting;
+	display: flex;
+	align-items: center;
+}
+
+.greeting > svg {
+	height: 60px;
+	flex: 1;
+}
+
+.greeting > span {
+	flex: 3;
 }
 
 .actions {
 	grid-area: actions;
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	gap: 20px;
+}
+
+.actionBtn {
+	flex: 1;
+	font-size: 15px;
+	height: 35px;
+	border-radius: 25px;
+	border-style: none;
+	background-color: rgb(0, 153, 255);
+	color: white;
 }
 
 
@@ -170,4 +214,35 @@ svg.big-icon { /*for the top logo*/
 #main {
 	grid-area: main;
 	background-color: rgb(234, 230, 230);
+	display: grid;
+	grid-template-rows: 60px 1fr;
+	grid-template-areas: 
+		"title"
+		"cards";
+}
+
+.title {
+	grid-area: title;
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	grid-template-areas: "t1 t2";
+	align-items: end;
+
+}
+
+#t1 {
+	grid-area: t1;
+	padding-left: 20px;
+}
+
+#t2 {
+	grid-area: t2;
+}
+
+.cards {
+	grid-area: cards;
+}
+
+#main > div {
+	border: solid 1px red;
 }
